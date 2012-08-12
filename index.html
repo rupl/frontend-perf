@@ -21,6 +21,7 @@
 		<link rel="stylesheet" href="css/print.css" type="text/css" media="print">
 
 		<link rel="stylesheet" href="lib/github.css">
+		<link rel="stylesheet" href="lib/carousel.css">
 	</head>
 	
 	<body>
@@ -42,11 +43,92 @@
 					</script>
 				</section>
 
+				<section>
+					<h2>Theme development</h2>
+					<h3 class="inverted">How can I build faster?</h3>
+				</section>
 
+				<section>
+				  <section>
+  					<h2>Browser Development Tools</h2><br>
+  					<h3 class="nt">(devtools)</h3>
+					</section>
+          <section>
+            <h3>History</h3>
+            <p class="fragment">In the early days you downloaded extensions</p>
+            <p class="fragment">Now it's included and browsers share features.</p>
+            <br>
+            <p class="fragment">Why? <b>They all want the Open Web to win.</b></p>
+          </section>
+          <section>
+            <h3>Browser Makers</h3>
+            <p class="fragment">want to hear from YOU</p><br>
+            <ul class="fragment">
+              <li><a href="https://twitter.com/chromiumdev">@ChromiumDev</a></li>
+              <li><a href="https://twitter.com/ODevRel">@ODevRel</a></li>
+              <li><a href="https://twitter.com/mozhacks">@mozhacks</a></li>
+              <li><a href="https://twitter.com/IE">@IE</a></li>
+            </ul>
+          </section>
+				</section>
 
-
-
-
+        <section>
+          <section>
+            <h2 class="nt">Chrome devtools protips</h2>
+          </section>
+          <section>
+            <h3 class="nt">Easily check the media query that supplies each style</h3>
+            <p class="fragment"><img src="img/devtools-mq-styles.png" alt="Media queries are displayed within the 'Styles' section of the Chrome element inspector"></p>
+          </section>
+          <section>
+            <h3 class="nt">Spoof user-agent and dimensions</h3>
+            <p class="fragment"><img src="img/devtools-ua-screensize.png" alt="Browsers can spoof their user-agent string and screen dimensions. Settings are under 'User-agent' tab."></p>
+          </section>
+          <section>
+            <h3 class="nt">Disable all caching</h3>
+            <p>(while the devtools are open)</p>
+            <p class="fragment"><img src="img/devtools-disable-cache.png" alt="Chrome can disable all caching while its devtools are open. Settings are under 'General' tab."></p>
+            <p class="fragment">Great for testing network waterfalls</p>
+          </section>
+          <section>
+            <h3>Network waterfalls</h3>
+            <p>The first step to debug load-time issues</p>
+          </section>
+          <section data-state="big-img">
+            <div class="container">
+              <div class="carousel">
+                <p>
+                  <img src="img/devtools-waterfall-1.png" alt="Chrome's network waterfall tools." style="width: 1149px; height: 593px; "><br>
+                  <caption>Waterfalls show the sequence and timing of your browser's network activity as it assembles a web page.</caption>
+                </p>
+                <p>
+                  <img src="img/devtools-waterfall-2.png" alt="Chrome's network waterfall tools: total number of requests" style="width: 1149px; height: 593px; "><br>
+                  <caption>Total number of requests required to assemble web page.</caption>
+                </p>
+                <p>
+                  <img src="img/devtools-waterfall-3.png" alt="Chrome's network waterfall tools: total page weight." style="width: 1149px; height: 593px; "><br>
+                  <caption>Total amount of data transferred to assemble web page (page weight).</caption>
+                </p>
+                <p>
+                  <img src="img/devtools-waterfall-4.png" alt="Chrome's network waterfall tools: total time required." style="width: 1149px; height: 593px; "><br>
+                  <caption>Total amount of time reuqired to assemble web page.</caption>
+                </p>
+                <p>
+                  <img src="img/devtools-waterfall-5.png" alt="Chrome's network waterfall tools: time to DOMContentLoaded." style="width: 1149px; height: 593px; "><br>
+                  <caption>
+                    Total amount of time before the DOM is ready.<br>
+                    Users start to "feel" like the webpage has loaded.<br>
+                    <small>jQuery does not execute until this event has occurred.</small>
+                  </caption>
+                </p>
+              </div><!-- .carousel -->
+            </div><!-- .container -->
+          </section>
+          <section>
+            <h3>More info</h3>
+            <p><a href="http://j.mp/browser-devtools-2012">Frontend tooling @ jQuery UK 2012</a></p>
+          </section>
+        </section>
 
 
 
@@ -277,6 +359,7 @@ linkify( 'a' );
 		<!-- Optional libraries for code syntax highlighting and classList support in IE9 -->
 		<script src="lib/highlight.js"></script>
 		<script src="lib/classList.js"></script>
+		<script src="lib/carousel.js"></script>
 		
 		<script src="js/reveal.js"></script>
 		
