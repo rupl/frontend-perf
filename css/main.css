@@ -280,6 +280,19 @@ body {
 		        box-shadow: 0 0 20px rgba(0, 0, 0, 0.55);
 	}
 
+/* Allow for bigger images */
+.big-img .reveal section img {
+  margin-top: -50px;
+  margin-left: -150px;
+}
+
+
+/* Remove text-transform */
+.reveal .nt {
+  text-transform: none;
+}
+
+
 
 /*********************************************
  * CONTROLS
