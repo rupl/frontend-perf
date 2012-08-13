@@ -286,12 +286,16 @@ body {
   margin-left: -150px;
 }
 
-
 /* Remove text-transform */
 .reveal .nt {
   text-transform: none;
 }
 
+/* Examples should be subdued */
+.reveal .example {
+  font-size: .9em;
+  color: #888;
+}
 
 
 /*********************************************

@@ -45,7 +45,8 @@
 
 				<section>
 					<h2>Theme development</h2>
-					<h3 class="inverted">How can I build faster?</h3>
+					<br>
+					<h3 class="nt">How can I build/debug faster?</h3>
 				</section>
 
 				<section>
@@ -126,13 +127,67 @@
           </section>
           <section>
             <h3>More info</h3>
-            <p><a href="http://j.mp/browser-devtools-2012">Frontend tooling @ jQuery UK 2012</a></p>
+            <p>&hellip;about <a href="http://j.mp/browser-devtools-2012">Frontend tooling @ jQuery UK 2012</a></p>
+            <p>&hellip;about <a href="http://j.mp/waterfall-webperf">using waterfall charts to interpret webperf data</a></p>
           </section>
         </section>
 
+        <section>
+          <h2>Web Performance</h2>
+          <br>
+          <h3 class="nt">How do I make pages load faster?</h3>
+        </section>
 
+        <section>
+          <h2>Warning:</h2>
+          <br>
+          <p>Not everything in this section is universal</p><br>
+          <p class="fragment">You must act on problems that you discover on <b>each site that you test</b>, not according to <i>"best practices"</i></p><br>
+          <p class="fragment">Applying optimization where none is needed can actually <b>slow your site down</b> in some cases</p>
+        </section>
 
+        <section>
+          <h2 class="nt">JavaScript Tools</h2>
+          <br><br><br>
+          <p class="fragment"><code>♥.¸¸.•°*☆ -=(>^_^)> \(^_^\) ☆*°•.¸¸.♥</code></p>
+          <br>
+          <p class="fragment"><small>&nbsp; JS &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; mich</small></p>
+        </section>
 
+        <section>
+          <section>
+            <h3>SouthStreet</h3>
+            <p class="nt">by Filament Group</p>
+          </section>
+          <section>
+            <h3 class="nt">eCSSential</h3>
+            <p class="fragment">
+              <b>Problem:</b> CSS is loaded when it is not needed.<br>
+              <small class="fragment">Sometimes it will never be used by the device in question. It's just dead weight.</small>
+            </p>
+            <br>
+            <p class="fragment example"><i>Example:</i> mobile phone downloading CSS with<br> <code>@media (min-width: 1400px)</code></p><br>
+            <p class="fragment"><b>Solution:</b> eCSSential will only load CSS that is needed immediately. It lazy-loads CSS that <i>might</i> be used.</p><br>
+            <p class="fragment"><b>Code:</b> <a href="https://github.com/scottjehl/eCSSential">https://github.com/scottjehl/eCSSential</a></p>
+          </section>
+          <section>
+            <h3 class="nt">Picturefill</h3>
+            <p class="fragment"><b>Problen:</b> we need different images for different device contexts. Affects usability and page speed.</p>
+            <br>
+            <p class="fragment">Developed to explore <b>responsive images</b> before a native browser implementation emerges.</p>
+            <br>
+            <p class="fragment"><b>Code:</b> <a href="https://github.com/scottjehl/picturefill/">https://github.com/scottjehl/picturefill/</a></p>
+          </section>
+          <section>
+            <h3 class="nt">Picturefill in Drupal</h3>
+            <br>
+            <p class="fragment">D7 - Module available at <a href="http://drupal.org/project/resp_img">http://drupal.org/project/resp_img</a></p>
+            <br>
+            <p class="fragment">D8 - Core implementation WIP <a href="http://drupal.org/node/1170478">http://drupal.org/node/1170478</a></p>
+            <br>
+            <p class="fragment">Drupal 8 efforts are <a href="http://www.w3.org/community/respimg/2012/08/04/picture-in-drupal-8/">helping influence the formation of this web standard</a></p>
+          </section>
+        </section>
 
 
 
