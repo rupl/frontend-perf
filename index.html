@@ -43,6 +43,27 @@
 					</script>
 				</section>
 
+        <section>
+          <section>
+            <h2>What is this talk about?</h2>
+            <br>
+            <p class="fragment">Sometimes we get so wrapped up making flashy stuff that we forget about making things lean and fast.</p>
+            <br>
+            <p class="fragment">Users always care about performance over cool effects.<br> <span class="fragment">Even when they don't realize it.</span></p>
+            <br>
+            <p class="fragment">These problems grow bigger when you throw mobile into the mix.</p>
+          </section>
+          <section>
+            <h2>Topics</h2>
+            <br>
+            <p class="fragment"><b>Theme development:</b> How can I build/debug faster?</p>
+            <br>
+            <p class="fragment"><b>Web Performance:</b> How do I make pages load faster?</p>
+            <br>
+            <p class="fragment"><b>Drupal-specific tools:</b> It is DrupalCon after all..</p>
+          </section>
+        </section>
+
 				<section>
 					<h2>Theme development</h2>
 					<br>
@@ -156,7 +177,7 @@
 
         <section>
           <section>
-            <h3>SouthStreet</h3>
+            <h3 class="nt">SouthStreet</h3>
             <p class="nt">by Filament Group</p>
           </section>
           <section>
@@ -178,8 +199,38 @@
             <br>
             <p class="fragment"><b>Code:</b> <a href="https://github.com/scottjehl/picturefill/">https://github.com/scottjehl/picturefill/</a></p>
           </section>
+        </section>
+
+        <section>
           <section>
-            <h3 class="nt">Picturefill in Drupal</h3>
+            <h2>Drupal-specific Tools</h2>
+            <br>
+            <h3 class="nt">What has already been automated within Drupal?</h3>
+          </section>
+          <section>
+            <h3 class="nt">Speedy</h3>
+            <p class="fragment"><b>Problem:</b> most JavaScript files within Drupal core are not minified.</p>
+            <br>
+            <p class="fragment"><b>Solution:</b> Minify files to make them smaller and decrease download time.</p>
+            <br>
+            <p class="fragment"><b>Read:</b> <a href="http://engineeredweb.com/blog/why-minify-javascript/">How does minifying JS reduce page load times?</a></p>
+            <br>
+            <p class="fragment"><b>Code:</b> <a href="http://drupal.org/project/speedy">http://drupal.org/project/speedy</a></p>
+          </section>
+          <section>
+            <h3 class="nt">Modernizr</h3>
+            <p class="fragment"><b>Problem:</b> user-agent sniffing is error-prone and unable to scale as more devices are created.</p>
+            <br>
+            <p class="fragment"><b>Solution:</b> Detect individual features on each browser</p>
+            <br>
+            <p class="fragment"><b>Bonus:</b> load different JavaScript files depending on the test results (<i>conditional loading</i>)</p>
+            <br>
+            <p class="fragment"><b>Code:</b> <a href="http://drupal.org/project/modernizr">http://drupal.org/project/modernizr</a></p>
+            <br>
+            <p class="example"><small><i>Disclosure: I maintain this Drupal module.</i></small></p>
+          </section>
+          <section>
+            <h3 class="nt">Picturefill</h3>
             <br>
             <p class="fragment">D7 - Module available at <a href="http://drupal.org/project/resp_img">http://drupal.org/project/resp_img</a></p>
             <br>
@@ -188,8 +239,6 @@
             <p class="fragment">Drupal 8 efforts are <a href="http://www.w3.org/community/respimg/2012/08/04/picture-in-drupal-8/">helping influence the formation of this web standard</a></p>
           </section>
         </section>
-
-
 
 
 
