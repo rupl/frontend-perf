@@ -168,6 +168,17 @@ body {
 	margin-left: 40px;
 }
 
+.reveal ul.checks {
+  list-style-type: none;
+}
+.reveal ul.checks li {
+  margin-top: .5em;
+}
+.reveal ul.checks li:before {
+  content: '\2714   ';
+  color: green;
+}
+
 .reveal p {
 	margin-bottom: 10px;
 }
@@ -970,11 +981,26 @@ body {
 .alert .state-background {
 	background: rgba( 200, 50, 30, 0.6 );
 }
+.alert .reveal * {
+  color: #fff;
+}
 .soothe .state-background {
 	background: rgba( 50, 200, 90, 0.4 );
 }
+.soothe .reveal * {
+  color: #fff;
+}
 .blackout .state-background {
 	background: rgba( 0, 0, 0, 0.6 );
+}
+.blackout .reveal * {
+  color: #fff;
+}
+.bluesy .state-background {
+	background: rgba( 0, 0, 75, 0.5 );
+}
+.bluesy .reveal * {
+  color: #fff;
 }
 
 
