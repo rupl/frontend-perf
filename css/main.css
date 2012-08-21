@@ -178,6 +178,9 @@ body {
   content: '\2714   ';
   color: green;
 }
+.reveal ul.white li:before {
+  color: white;
+}
 
 .reveal p {
 	margin-bottom: 10px;
