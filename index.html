@@ -268,10 +268,32 @@
           <h2 class="nt">JavaScript Tools</h2>
           <br><br><br>
           <div class="fragment">
-            <p><code>♥.¸¸.•°*☆ (づ◕‿◕｡)づ <(^_^<)=- ☆*°•.¸¸.♥</code></p>
+            <p><code>♥.¸¸.•°*☆ (づ◕‿◕｡)づ &lt;(^_^&lt;)=- ☆*°•.¸¸.♥</code></p>
             <br>
             <p><small>&nbsp; JS &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; me</small></p>
           </div>
+        </section>
+
+        <section>
+          <section>
+            <h2 class="nt">before we get crackin'</h2>
+            <br><br>
+            <p class="fragment">let's talk about <b><i>conditional loading</i></b></p>
+          </section>
+          <section>
+            <h2 class="nt">Conditional loading</h2>
+            <p>Load things based on tests</p>
+            <br><br>
+            <ul class="fragment checks">
+              <li>Browser properties
+              <li>Browser features
+              <li>User actions or preferences
+            </ul>
+          </section>
+          <section>
+            <h2 class="nt">Comparison</h2>
+            <p>demonstrate regular loading vs conditional loading</p>
+          </section>
         </section>
 
         <section>
@@ -285,8 +307,9 @@
           </section>
           <section data-state="alert">
             <br><br>
-            <p><i>Problem:</i> CSS is loaded when it is not needed.</p><br><br>
-            <p class="fragment">Sometimes it will never be used. It's just dead weight.</p>
+            <p><i>Problem:</i><br></p>
+            <p>CSS is loaded when it is not needed.</p><br><br>
+            <p class="fragment">Sometimes it will never be used.<br> It's just dead weight.</p>
             </p>
           </section>
           <section>
@@ -296,10 +319,18 @@
               <code>@media (min-width: 1400px)</code><br>
               <span class="fragment">then it downloads your big background images</span>
             </p>
+            <br><br>
+            <small class="fragment">Data: <a href="http://scottjehl.github.com/CSS-Download-Tests/">http://scottjehl.github.com/CSS-Download-Tests/</a></small>
           </section>
           <section data-state="soothe">
             <br><br>
-            <p><i>Solution:</i> eCSSential will only load CSS that is needed immediately. It lazy-loads CSS that <i>might</i> be used.</p><br>
+            <p><i>Solution:</i></p>
+            <p>
+              <b>Directly load</b> CSS that <i>will</i> be used.<br>
+              <b>Lazy-load</b> CSS that <i>might</i> be used.<br>
+              <b>Ignore</b> CSS that <i>cannot</i> be used.
+            </p>
+            <br><br>
             <p class="fragment"><b>Code:</b> <a href="https://github.com/scottjehl/eCSSential">https://github.com/scottjehl/eCSSential</a></p>
           </section>
           <section>
@@ -312,7 +343,7 @@
           <section data-state="soothe">
             <br><br>
             <p>Picturefill was developed to explore <b>responsive images</b> before a native browser implementation emerges.</p>
-            <br>
+            <br><br>
             <p class="fragment"><b>Code:</b> <a href="https://github.com/scottjehl/picturefill/">https://github.com/scottjehl/picturefill/</a></p>
           </section>
         </section>
@@ -333,11 +364,28 @@
             <p><i>Solution:</i> Detect individual features on each browser</p>
             <br>
             <p class="fragment">
-              <b>Bonus:</b> load additional files depending on the<br>
-              test results (<i>conditional loading</i>)
+              <b>Bonus:</b> includes a conditional loader called yepnope.js
             </p>
             <br>
             <p class="fragment"><b>Code:</b> <a href="http://www.modernizr.com">http://www.modernizr.com</a></p>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2 class="nt">Loading additional content</h2>
+          </section>
+          <section>
+            <h2 class="nt">Anchor-include pattern</h2>
+            <p>Conditionally load <i>content</i>,<br> <small>provided it exists at its own self-contained URI</small></p>
+            <br><br>
+            <p>[insert image]</p>
+            <br><br>
+            <p class="fragment">Code: <a href="https://gist.github.com/983328">https://gist.github.com/983328</a>
+          </section>
+          <section>
+            <h2 class="nt">JS libraries</h2>
+            <p>Consider a conditional load for optional widgets (like a social stream in the sidebar).</p>
           </section>
         </section>
 
