@@ -6,7 +6,7 @@
 		
 		<title>Advanced Frontend Performance - BADCamp 2012</title>
 
-		<meta name="description" content="Advanced Frontend Performance - BADCamp 2012">
+		<meta name="description" content="Advanced Frontend Performance - DrupalCamp Dallas 2013">
 		<meta name="author" content="Chris Ruppel">
 
 		<meta name="apple-mobile-web-app-capable" content="yes" />
@@ -35,8 +35,7 @@
 			<div class="slides">
 				<section data-state="bluesy">
 					<h1 style="font-size: 3.2em; ">Advanced Frontend Performance</h1><br><br>
-					<h3>BADCamp 2012</h3>
-					<!-- <p>Presented by <a href="http://twitter.com/rupl">Chris Ruppel</a></p> -->
+					<h3>DrupalCamp Dallas 2013</h3>
 					<script>
 						// Delicously hacky. Look away.
 						if( navigator.userAgent.match( /(iPhone|iPad|iPod|Android)/i ) ) document.write( '<p style="color: rgba(0,0,0,0.3); text-shadow: none;">('+'Tap to navigate'+')</p>' );
@@ -54,10 +53,11 @@
             <img src="img/4k-logo-square-500px.png" alt="Four Kitchens: we make BIG websites" style="border: 0; box-shadow: none; ">
           </section>
           <section>
-            <h3>I do Drupal stuff sometimes:</h3>
+            <h3>I do open source stuff:</h3>
             <ul class="fragment">
-              <li><a href="http://drupal.org/project/modernizr">http://drupal.org/project/modernizr</a>
-              <li><a href="http://drupal.org/project/respondjs">http://drupal.org/project/respondjs</a>
+              <li><a href="http://drupal.org/project/modernizr">Modernizr Drupal module</a>
+              <li><a href="https://github.com/Modernizr/Modernizr">Modernizr</a>
+              <li><a href="http://drupal.org/project/respondjs">Respond.js Drupal module</a>
               <li><a href="http://groups.drupal.org/html5/drupal-8">D8 HTML5 Initative</a>
               <li><a href="http://groups.drupal.org/mobile/drupal-8">D8 Mobile Initiative</a>
               <li><a href="http://drupal.org/community-initiatives/drupalorg/drupal7">Drupal.org D7 upgrade</a>
@@ -87,7 +87,7 @@
             <br>
             <p class="fragment"><b>Web Performance:</b> How do I make pages load faster?</p>
             <br>
-            <p class="fragment"><b>Drupal-specific tools:</b> It is BADCamp after all..</p>
+            <p class="fragment"><b>Drupal-specific tools:</b> It is DrupalCamp after all..</p>
           </section>
         </section>
 
@@ -118,6 +118,7 @@
               <li><a href="https://twitter.com/ODevRel">@ODevRel</a></li>
               <li><a href="https://twitter.com/mozhacks">@mozhacks</a></li>
               <li><a href="https://twitter.com/IE">@IE</a></li>
+              <li><a href="https://twitter.com/lolno">@Apple</a></li>
             </ul>
           </section>
 				</section>
@@ -175,7 +176,7 @@
               <img src="img/devtools-waterfall-5.png" alt="Chrome's network waterfall tools: time to DOMContentLoaded." style="width: 1149px; height: 593px; "><br>
               <caption>
                 Total amount of time before the DOM is ready.<br>
-                Users start to "feel" like the webpage has loaded.<br>
+                Users start to feel like the webpage has loaded.<br>
                 <small>jQuery does not execute until this event has occurred.</small>
               </caption>
             </p>
@@ -210,7 +211,8 @@
             <ul class="fragment">
               <li>Run JSHint on every file save</li>
               <li>Minify files with UglifyJS</li>
-              <li>Over 200 plugins with an<br> &nbsp; active community</li>
+              <li>Concat files and create builds<br>of libraries or aggregates</li>
+              <li>Over 200 plugins with an<br>active community</li>
             </ul>
           </section>
         </section>
@@ -223,6 +225,17 @@
         </section>
 
         <section>
+          <section>
+            <h2>Your goal:</h2>
+            <p class="fragment">Strive to deliver the <strong>best</strong> experience everywhere</p>
+            <br>
+            <p class="fragment">NOT the same experience. <span class="fragment">The best experience.</span></p>
+            <br>
+            <p class="fragment">Further reading:<br>
+              <a href="http://paulirish.com/2011/tiered-adaptive-front-end-experiences/">Tiered Adaptive Frontend Experiences (TAFEE)</a>
+              <a href="http://alexsexton.com/talks/modernizr-3-workflow/">Modernizr 3 workflow</a>
+            </p>
+          </section>
           <section data-state="alert">
             <h2>Warning:</h2>
             <br>
@@ -287,6 +300,41 @@
               <li>User actions or preferences
             </ul>
           </section>
+          <section>
+            <br>
+            <br>
+            <p>Making these decisions in the browser is the core mechanism for tiered experiences.</p>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h1>Modernizr</h1>
+          </section>
+          <section data-state="alert">
+            <br><br>
+            <p>
+              <i>Problem:</i> user-agent sniffing is error-prone;<br>
+              unable to scale as more devices are created
+            </p>
+          </section>
+          <section data-state="soothe">
+            <br><br>
+            <p><i>Solution:</i> Detect individual features on each browser</p>
+            <br>
+            <p class="fragment">
+              <b>Bonus:</b> includes a conditional loader called yepnope.js
+            </p>
+            <br>
+            <p class="fragment"><b>Code:</b> <a href="http://www.modernizr.com">http://www.modernizr.com</a></p>
+          </section>
+          <section>
+            <p class="fragment">If you need media queries, test for them.</p>
+            <p class="fragment">If you need CSS transitions, test for them.</p>
+            <p class="fragment">If you need HTML5 audio or video, test for them.</p>
+            <p class="fragment">If you need inline SVG, test for it.</p>
+            <p class="fragment">If you need web sockets, test for it.</p>
+          </section>
         </section>
 
         <section>
@@ -343,29 +391,6 @@
 
         <section>
           <section>
-            <h1>Modernizr</h1>
-          </section>
-          <section data-state="alert">
-            <br><br>
-            <p>
-              <i>Problem:</i> user-agent sniffing is error-prone;<br>
-              unable to scale as more devices are created
-            </p>
-          </section>
-          <section data-state="soothe">
-            <br><br>
-            <p><i>Solution:</i> Detect individual features on each browser</p>
-            <br>
-            <p class="fragment">
-              <b>Bonus:</b> includes a conditional loader called yepnope.js
-            </p>
-            <br>
-            <p class="fragment"><b>Code:</b> <a href="http://www.modernizr.com">http://www.modernizr.com</a></p>
-          </section>
-        </section>
-
-        <section>
-          <section>
             <br>
             <h2>Conditional content</h2>
           </section>
@@ -381,6 +406,49 @@
             <p>Consider conditional loading for optional widgets</p>
             <br>
             <p class="fragment"><i>Examples:</i> Social widgets, sharing tools</p>
+            <br>
+            <p class="fragment"><a href="http://alexsexton.com/blog/2013/03/deploying-javascript-applications/">Examples from Alex Sexton, Engineer at Bazaarvoice</a></p>
+          </section>
+          <section>
+            <img src="img/delaypackage.gif" alt="Animated screenshot of deferred script downloads. The script doesn't download until the user's mouse gets within 200px of the Review button.">
+            <br>
+            <small>Source: http://alexsexton.com/blog/2013/03/deploying-javascript-applications/</small>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <br>
+            <h2>Predict user actions</h2>
+          </section>
+          <section>
+            <br>
+            <p>You can't change the speed of the network.</p>
+            <br>
+            <p class="fragment">You might be able to predict user actions</p>
+            <br>
+            <p class="fragment">Preempting the user makes things <b style="font-size: 125%;">feel instant</b></p>
+          </section>
+          <section>
+            <h2>DNS Prefetching</h2>
+            <p class="fragment">Allows you to do DNS lookups in the background</p>
+            <br>
+            <p class="fragment">Then the actual requests for assets are much faster</p>
+            <br>
+            <small class="fragment"><code>&lt;link rel="prefetch" href="http://example.com"></code></small>
+            <br><br>
+            <p class="fragment"><a href="http://www.w3.org/html/wg/drafts/html/master/links.html#link-type-prefetch">HTML spec</a></p>
+          </section>
+          <section>
+            <h2>Prerender in Chrome</h2>
+            <p class="fragment">Chrome takes prefetching to its extreme</p>
+            <p class="fragment">Tested extensively by users of Google Instant</p>
+            <p><code><link rel="prerender" href="http://example.com/faq"></code></p>
+            <br><br>
+            <p class="fragment">
+              More info:<br>
+              <a href="http://fourkitchens.com/blog/2013/03/20/prerender-chrome-instant-page-loads">Prerender in Chrome for instant page loads</a><br>
+              <a href="https://developers.google.com/chrome/whitepapers/prerender">Web Developer's Guide to Prerendering in Chrome</a>
           </section>
         </section>
 
@@ -483,7 +551,7 @@
 
         <section>
           <section>
-            <h1>Modernizr 7.x-3.0</h1>
+            <h1>Modernizr 7.x-3.x</h1>
           </section>
           <section data-state="alert">
             <br><br>
@@ -505,7 +573,13 @@
             <p class="example"><small><i>Disclosure: I maintain this Drupal module.</i></small></p>
           </section>
           <section>
-            <h1>Speedy</h1>
+            <h2>Inline one-use JS</h2>
+            <p class="fragment">Don't keep important JS in your theme.</p>
+            <p class="fragment">And don't load a tiny 10-line file</p>
+            <p class="fragment"><a href="http://fourkitchens.com/blog/2013/02/05/inlining-one-use-javascript">Inlining one-use JavaScript</a></p>
+          </section>
+          <section>
+            <h1>UglifyJS</h1>
           </section>
           <section data-state="alert">
             <br><br>
@@ -515,9 +589,11 @@
           </section>
           <section data-state="soothe">
             <br><br>
-            <p><i>Solution:</i> Minify files to make them smaller and decrease download time.</p>
+            <p><i>Solution:</i> Minify files  on the fly to make them smaller and decrease download time.</p>
             <br>
-            <p class="fragment"><b>Code:</b> <a href="http://drupal.org/project/speedy">http://drupal.org/project/speedy</a></p>
+            <p class="fragment"><b>Code:</b> <a href="http://drupal.org/project/uglifyjs">http://drupal.org/project/uglifyjs</a></p>
+            <br>
+            <p class="fragment">Further reading: <a href="http://fourkitchens.com/blog/2013/02/21/minified-javascript-fly">Minified JS on the Fly!</a>
           </section>
           <section>
             <h1>Picturefill</h1>
