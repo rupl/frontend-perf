@@ -1015,6 +1015,6 @@ img.bare {
   color: #fff;
 }
 
-
-
-
+.fingerprint .state-background {
+	background: #fff url('http://www.police.oakland.edu/upload/images/Police/fingerprint_8yys.jpg') no-repeat right bottom; 
+}
