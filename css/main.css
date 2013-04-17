@@ -309,6 +309,16 @@ img.bare {
   box-shadow: none;
 }
 
+/* faux-columns */
+.slide-left {
+  float: left;
+  width: 50%;
+}
+.slide-right {
+  float: right;
+  width: 50%;
+}
+
 /* Remove text-transform */
 .reveal .nt {
   text-transform: none;
@@ -964,6 +974,7 @@ img.bare {
 	opacity: 1!important;
 	position: relative!important;
 }
+
 
 
 /*********************************************
