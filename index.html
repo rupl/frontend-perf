@@ -96,23 +96,12 @@
 
         <section data-state="blackout">
           <br>
-          <h2>Web Performance</h2>
+          <h2>Load times</h2>
           <br>
           <h3>How do I make pages load faster?</h3>
         </section>
 
         <section>
-          <section>
-            <h2>Your goal:</h2>
-            <p class="fragment">Strive to deliver the <strong>best</strong> experience everywhere</p>
-            <br>
-            <p class="fragment">NOT the same experience. <span class="fragment">The best experience.</span></p>
-            <br>
-            <p class="fragment">Further reading:<br>
-              <a href="http://paulirish.com/2011/tiered-adaptive-front-end-experiences/">Tiered Adaptive Frontend Experiences (TAFEE)</a>
-              <a href="http://alexsexton.com/talks/modernizr-3-workflow/">Modernizr 3 workflow</a>
-            </p>
-          </section>
           <section data-state="alert">
             <h2>Warning:</h2>
             <br>
@@ -130,9 +119,6 @@
               not according to <i>"best practices"</i>
             </p>
           </section>
-        </section>
-
-        <section>
           <section>
             <h2>Having said that&hellip;</h2>
           </section>
@@ -147,6 +133,19 @@
             </ul>
             <br><br><br>
             <p class="fragment">The real fun starts once you've got these under control.</p>
+          </section>
+        </section>
+        <section>
+          <section>
+            <h2>Your goal:</h2>
+            <p class="fragment">Strive to deliver the <strong>best</strong> experience everywhere</p>
+            <br>
+            <p class="fragment">NOT the same experience. <span class="fragment">The best experience.</span></p>
+            <br>
+            <p class="fragment">Further reading:<br>
+              <a href="http://paulirish.com/2011/tiered-adaptive-front-end-experiences/">Tiered Adaptive Frontend Experiences (TAFEE)</a>
+              <a href="http://alexsexton.com/talks/modernizr-3-workflow/">Modernizr 3 workflow</a>
+            </p>
           </section>
         </section>
 
@@ -186,6 +185,7 @@
 
         <section>
           <section>
+            <br><br>
             <h1>Modernizr</h1>
           </section>
           <section data-state="alert">
@@ -206,11 +206,13 @@
             <p class="fragment"><b>Code:</b> <a href="http://www.modernizr.com">http://www.modernizr.com</a></p>
           </section>
           <section>
-            <p class="fragment">If you need media queries, test for them.</p>
-            <p class="fragment">If you need CSS transitions, test for them.</p>
+            <br><br>
             <p class="fragment">If you need HTML5 audio or video, test for them.</p>
-            <p class="fragment">If you need inline SVG, test for it.</p>
+            <p class="fragment">If you need download blobs, test for them.</p>
+            <p class="fragment">If you need CSS transitions, test for them.</p>
+            <p class="fragment">If you need drag and drop, test for it.</p>
             <p class="fragment">If you need web sockets, test for it.</p>
+            <p class="fragment">If you need inline SVG, test for it.</p>
           </section>
         </section>
 
@@ -222,7 +224,7 @@
           <section>
             <h2>Conditional CSS</h2>
             <br>
-            <p>Yes, your site is <i>so purty</i> on a 30-inch display. But it destroys my phone.</p>
+            <p>Yes, your huge bg is <i>so purty</i> on a 30-inch display.<br> But it destroys my phone.</p>
             <br>
             <p class="fragment">Make sure you need huge CSS/images before loading.</p>
             <br>
@@ -231,7 +233,7 @@
           </section>
           <section>
             <h3>Anchor-include pattern</h3>
-            <p>Conditionally load <i>content</i>,<br> <small>provided it exists at its own self-contained URI</small></p>
+            <p>Conditionally load <i>modular content</i>,<br> <small>provided it exists at its own self-contained URI</small></p>
             <p class="fragment"><img src="img/anchor-include.png" alt="" class="bare"></p>
             <br>
             <p class="fragment">Code: <a href="https://gist.github.com/983328">https://gist.github.com/983328</a>
@@ -309,6 +311,15 @@
             <br><br>
             <small>Source: http://alexsexton.com/blog/2013/03/deploying-javascript-applications/</small>
           </section>
+          <section>
+            <h2>Quick user feedback</h2>
+            <br>
+            <p>Easy win: remove the 300ms click event delay in iOS/Android. It's there by default to allow for scrolling without triggering links but it basically sucks.</p>
+            <br><br>
+            <p class="fragment"><a href="https://github.com/ftlabs/fastclick">FastClick</a> is a slim JS library that dynamically replaces all <code>click</code> event handlers with <code>touchstart</code>.</p>
+            <br><br>
+            <p class="fragment">Example: <a href="http://2013.drupalcampaustin.org">Browse DrupalCamp Austin on a touchthing</a></p>
+          </section>
         </section>
 
         <section>
@@ -320,7 +331,7 @@
 
         <section>
           <section>
-            <h2>Web performance testing</h2>
+            <h2>Load time testing</h2>
           </section>
           <section>
             <h2>YSlow</h2>
@@ -335,7 +346,8 @@
             </div>
           </section>
           <section>
-            <h2>Automating YSlow</h2>
+            <h2 style="margin-top: -1em; ">Automating YSlow</h2>
+            <br>
             <pre style="font-size: .7em; width: 140%; margin-left: -20%; "><code class="language-bash">
     # install waterfall viewer (ruby)
     $ gem install har
@@ -351,7 +363,9 @@
     $ yslow --info basic --format plain ra.har
             </code></pre>
             <br>
-            <p><small>Credit: <a href="http://www.igvita.com/slides/2012/devtools-tips-and-tricks/#10">Ilya Grigorik</a></small></p>
+            <p class="fragment"><a href="https://help.github.com/articles/post-receive-hooks">Webhooks</a> + <a href="http://jenkins-ci.org/">Jenkins</a> + this = per-commit Yslow scores!</p>
+            <br>
+            <p><small>Code compliments of <a href="http://www.igvita.com/slides/2012/devtools-tips-and-tricks/#10">Ilya Grigorik</a></small></p>
           </section>
           <section>
             <h2>WebPageTest.org</h2>
